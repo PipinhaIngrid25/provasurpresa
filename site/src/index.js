@@ -7,6 +7,8 @@ import Salario from './pages'
 import SignoLibra from './pages'
 import Sorveteria from './pages'
 import Temperatura from './pages';
+import Tanque from './pages';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +21,7 @@ root.render(
 <Route path='/signoLibra' elemento={< SignoLibra /> }/>
 <Route path='/sorveteria' elemento={< Sorveteria /> }/>
 <Route path='/temperatura' elemento={< Temperatura /> }/>
+<Route path='/tanque' elemento={< Tanque /> }/>
 
 </Routes>
 </BrowserRouter>
