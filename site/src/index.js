@@ -2,12 +2,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CalcularAcai from './pages'
-import Salario from './pages'
-import SignoLibra from './pages'
-import Sorveteria from './pages'
-import Temperatura from './pages';
-import Tanque from './pages';
+import CalcularAcai from './pages/CalcularAcai'
+import Salario from './pages/Salario'
+import SignoLibra from './pages/signoLibra'
+import Sorveteria from './pages/sorveteria'
+import Temperatura from './pages/Temperatura';
+import Tanque from './pages/Tanque';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

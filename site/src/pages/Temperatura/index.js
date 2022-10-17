@@ -25,3 +25,6 @@ export default function Temperatura(){
   else {
     return setResultado ("Hipotemia")
   }
+
+ } 
+}

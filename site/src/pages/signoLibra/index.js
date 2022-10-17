@@ -14,8 +14,7 @@ export default function Index () {
             return setResultado("Seu singo não é de libra")
         }
     }
-  
-}
+
 return(
     <main>
         <div>
@@ -29,4 +28,5 @@ return(
             <button className="botão">você é libriano?</button>
         </div>
     </main>
-)
+ )
+}

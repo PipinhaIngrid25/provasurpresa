@@ -2,30 +2,18 @@ import { useState } from "react";
 import './index.scss'
 
 export default function Index() {
-    const [qtdP, setQtdP] = useState();
-    const [qtdM, setQtdM] = useState();
-    const [qtdG, setQtdG] = useState();
-    const [desc, setDesc] = useState(0);
-    const [resultado, setResultado] = useState();
+  const [n1, setN1] = useState(0);
+  const [n2, setN2] = useState(0);
+  const [n3, setN3] = useState(0);
+  const [desc, setDesc] = useState(0);
+  const [resul, setResul] = useState(0);
 
-    function calcularAcai() {
-        const a = qtdP * 13.50;
-        const b = qtdM * 15;
-        const c = qtdG * 17.50;
+  function calcular() {
+    let acai = n1 * 13.5 + n2 * 15 + n3 * 17.5;
+    let d = acai - (acai * (desc/100));
+    setResul (d);
+  }
 
-        if (desc == 0) {
-            const x = (a+b+c);
-            setResultado(x)
-        }
-        else if (desc == 100) {
-            setResultado(0)
-        }
-        else {
-            const x = ((a+b+c) * desc)/100;
-            setTotal(x)
-        }
-    } 
-}
 return(
     <main className="Calculo">
         <div>
@@ -47,4 +35,5 @@ return(
             <button>Calcular</button>
         </div>
     </main>
-)
+ )
+}

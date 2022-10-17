@@ -19,7 +19,5 @@ export default function Index() {
             setMsg('')
         }
     }
-} 
-return(
-    
-)
+
+}
