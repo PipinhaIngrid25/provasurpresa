@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './index.scss'
+import './index.scss';
 
 export default function Temperatura(){
     const [temperatura, setTemperatura] = useState('');
@@ -26,5 +26,17 @@ export default function Temperatura(){
     return setResultado ("Hipotemia")
   }
 
- } 
+  }
+
+    return(
+       <main className="page-temperatura">
+
+      <section className="conteiner-1">
+      <h1>Temperatura</h1>
+        <div> informe a temperatura:  <input className="input" type="number" value={temperatura} onChange={e => setTemperatura(Number(e.target.value))}></input> </div>
+        <button className="botao" onClick={calculoTemperatura}>Vereficar</button>
+        <div>  {resultado} </div>
+      </section>
+
+       </main>)
 }

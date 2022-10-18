@@ -1,32 +1,31 @@
 import { useState } from "react";
 import './index.scss'
 
-export default function Index () {
-    const [mes, setMes] = useState(" ");
+export default function MesDia(){
+    const [mes, setMes] = useState('');
     const [dia, setDia] = useState(0);
-    const [resultado, setResultado] = useState(" ");
-    
-    function signoLibra () {
-        if (mes === "setembro" && dia >= 23 || mes === "outubro" && dia <= 22) {
-        return setResultado("Seu signo é de Libra!")
-        }
-        else {
-            return setResultado("Seu singo não é de libra")
-        }
-    }
+    const [resultado, setResultado] = useState('')
 
-return(
-    <main>
-        <div>
-            <img src="../images/Libra.jpeg"></img>
-        </div>
-        <div className="Textos">
-            <h1>Veja se você é do signoLibra:</h1>
-            <imput></imput>
-            <imput type="text">Dia de nascimento?</imput>
-            <imput type="text">Mês de nascimento?</imput>
-            <button className="botão">você é libriano?</button>
-        </div>
-    </main>
- )
+  function logica(){
+   if((mes === "setembro" && dia >= 23 && dia <=30 || (mes === "outubro" && dia >= 22 && dia <=31 )))
+  {
+    return setResultado("É libra")
+  }
+  else{
+    return setResultado ("Não é libra")
+  }
+
+  }
+
+    return(
+       <main  className="page-signo">
+        <section className="conteiner-1">
+        <h1>Signos</h1>
+        <div> Informe o Mes:  <input className="input" type="text" value={mes} onChange={e => setMes(e.target.value)}></input> </div>
+        <div> Informe o Dia:  <input className="input" type="number" value={dia} onChange={e => setDia(Number(e.target.value))}></input> </div>
+        <button className="botao" onClick={logica}>Vereficar</button>
+        <div>  {resultado} </div>
+        </section> 
+
+       </main>)
 }
